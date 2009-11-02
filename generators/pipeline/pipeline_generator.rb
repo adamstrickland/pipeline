@@ -1,4 +1,4 @@
-class DataImportGenerator < Rails::Generator::NamedBase
+class PipelineGenerator < Rails::Generator::NamedBase
   def manifest
     record do |m|
       # m.directory "lib"

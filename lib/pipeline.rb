@@ -3,7 +3,7 @@ require 'active_support'
 require(File.join(File.dirname(__FILE__), '..', '..', '..', '..', 'config', 'boot'))
 require(File.join(File.dirname(__FILE__), '..', '..', '..', '..', 'config', 'environment'))
 
-module DataImport
+module Pipeline
 
   class Importer
     @@default_import_dir = File.join(File.dirname(__FILE__), '..', '..', '..', '..', 'db', 'import')
@@ -29,7 +29,7 @@ module DataImport
             mapper = Object.const_get("#{table_name.camelcase}Mapper")
           end
         end  
-        mapper ||= DataImport::IdentityMapping
+        mapper ||= Pipeline::IdentityMapping
         puts "    Using mapper: #{mapper}" if options[:verbose]
         
         FasterCSV.foreach(path, {:headers => :first_row, :col_sep => options[:delimiter]}) do |row|
