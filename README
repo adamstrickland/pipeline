@@ -3,7 +3,13 @@ Pipeline
 
 Pipeline is a straightforward but powerful way to move data between outlets (files, databases, etc.) using Ruby.  How, you ask?  Well, lemme tell ya...
 
-There are 3 parts to this beast.  The first is configuring the import.  The second is configuring the export.  The third is running it
+There are 3 parts to this beast.  The first is configuring the import.  The second is configuring the export.  The third is running it.  But first you have to install it.
+
+INSTALLATION
+
+script/plugin install git://github.com/adamstrickland/pipeline.git
+
+Now for the good stuff...
 
 CONFIGURE THE IMPORT
 
