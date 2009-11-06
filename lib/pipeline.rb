@@ -128,7 +128,7 @@ module Pipeline
     
     def initialize(to, options={})
       @destination = to
-      @transformation = options[:transform] || lambda{ |input| input }
+      @transformation = options[:transform] || lambda{ |input, context| input }
     end
     
     def apply(input, context, options={})
