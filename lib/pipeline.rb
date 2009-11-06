@@ -53,7 +53,10 @@ module Pipeline
     attr_reader :mappings
   end
   
-  class TransformMapper < AbstractMapper    
+  class TransformMapper < AbstractMapper
+    @@pre_processing = nil
+    @@post_processing = nil
+     
     def self.define_mappings(mappings={})
       @@mappings = {}
       mappings.each do |from, mpg|
